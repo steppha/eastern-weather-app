@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #37474f;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+body{
+    background: rgba(0, 0, 0, 0.938);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.container{
+    height: 400px;
+    width: 80%;
+    background-color: #23293128;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+    border: 2px solid rgba(86, 181, 236, 0.87);
+}
+
+.left-info{
+    width: 320px;
+    height: 100%;
+    float: left;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    
+    
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.03) perspective(300px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rrgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.left-info:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.pic-gradient{
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    top: 0;
+    left: 10;
+    background: linear-gradient(135deg, #9cd9f1ab 10%, #1f11e29f 100%);
+    border-radius: 25px;
+    opacity: 0.5;
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+    border: 3px solid rgb(233, 236, 238);
+   
+}
+
+.today-info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.today-weather{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 150px;
+    
+    
+}
+
+.today-weather .bx{
+    font-size: 2.6rem;
+}
+
+.weather-temp{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.right-info{
+    float: right;
+    position: relative;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.day-info{
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-info div:not(:last-child){
+    margin-bottom: 6px;
+}
+
+.day-info div .title{
+    font-weight: 600;
+}
+
+.day-info div .value{
+    float: right;
+}
+
+.days-list{
+    display: flex;
+    list-style: none;
+    margin: 10px 30px;
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+    border-radius: 10px;
+}
+
+.days-list li{
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+   
+}
+
+.days-list li .bx{
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.days-list li:hover{
+    transform: scale(1.1);
+    background: #0a0a0a;
+    color: #f3f4f7;
+
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+}
+
+.days-list li .day-temp{
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.btn-container{
+    padding: 20px 30px;
+}
+
+.loc-button{
+    outline: none;
+    margin-left: 100px;
+    width: 30%;
+    border: 2px solid rgba(86, 181, 236, 0.87);
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px;
+    background: #303f9f09;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+    transition: all 0.3s ease;
+    
+}
+
+.loc-button:hover{
+    background: #111111;
+}
+
+
+
+/* Media Queries (for smaller screens) */
+@media (max-width: 1268px) {
+    .container {
+        flex-direction: column;
+        padding: 3px;
+    }
+
+    .left-info,
+    .right-info {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .right-info {
+        padding-left: 3px;
+    }
+
+    .days-list {
+        overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
+    }
+    .loc-button{
+        padding: 3px;
+        width:60% ;
+   
+    }
+
+    .footer {
+    
+        padding: 1px ; 
+        width: 20%;
+        display: block; 
+        
+    }
+}
+
+.links{
+    background-color: rgba(14, 13, 13, 0.11);
+    padding: 2px;
+    border-radius: 8px;
+    border: 1.5px solid rgb(245, 243, 244);
+    color: #f0eff7;
+    box-shadow: 0 5px 15px rgba(86, 181, 236, 0.87);
+
+}
+ .links:hover{
+    background: rgba(245, 245, 247, 0.993);
+    transition: 2s;
+    animation: infinite;
+    color: rgba(86, 181, 236, 0.87) ;
+    
+
+}
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #37474f18; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    color:  rgba(86, 181, 236, 0.87) ;
+}
+
+
+  
+
